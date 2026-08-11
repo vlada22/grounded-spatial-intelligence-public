@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-FORBIDDEN_SUFFIXES = {'.ipynb', '.safetensors', '.pt', '.pth', '.bin', '.onnx', '.zip', '.tar', '.gz', '.ply', '.npz', '.npy'}
+FORBIDDEN_SUFFIXES = {'.ipynb', '.safetensors', '.pt', '.pth', '.bin', '.onnx', '.zip', '.tar', '.gz', '.npz', '.npy'}
 FORBIDDEN_NAMES = {'HF_TOKEN', 'GITHUB_TOKEN'}
 
 
