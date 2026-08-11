@@ -1,4 +1,4 @@
-name: Deploy public reconstruction explorer
+name: Deploy 3D reconstruction explorer
 
 on:
   push:
@@ -15,23 +15,23 @@ permissions:
   id-token: write
 
 concurrency:
-  group: github-pages
+  group: pages
   cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v6
 
       - name: Validate public bundle
         run: python scripts/validate_public_bundle.py
 
-      - name: Configure GitHub Pages
+      - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload original explorer mirror
+      - name: Upload reconstruction explorer
         uses: actions/upload-pages-artifact@v4
         with:
           path: demo
