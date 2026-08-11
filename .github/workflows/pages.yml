@@ -4,7 +4,6 @@ on:
   push:
     branches: [main]
     paths:
-      - "index.html"
       - "demo/**"
       - "scripts/validate_public_bundle.py"
       - ".github/workflows/pages.yml"
@@ -32,16 +31,10 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Assemble static site
-        run: |
-          mkdir -p _site/demo
-          cp index.html _site/index.html
-          cp -R demo/. _site/demo/
-
-      - name: Upload Pages artifact
+      - name: Upload original explorer mirror
         uses: actions/upload-pages-artifact@v4
         with:
-          path: _site
+          path: demo
 
   deploy:
     environment:
