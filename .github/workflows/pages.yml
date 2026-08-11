@@ -1,4 +1,4 @@
-name: Deploy 3D reconstruction explorer
+name: Deploy Article 02 explorer
 
 on:
   push:
@@ -6,6 +6,8 @@ on:
     paths:
       - "demo/**"
       - "scripts/validate_public_bundle.py"
+      - "scripts/verify_published_results.py"
+      - "PUBLICATION_SOURCE.json"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -27,6 +29,9 @@ jobs:
 
       - name: Validate public bundle
         run: python scripts/validate_public_bundle.py
+
+      - name: Verify published results
+        run: python scripts/verify_published_results.py
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "article": "02",
+  "sourceRepository": "vlada22/grounded-spatial-intelligence",
+  "sourceCommit": "e94d59e1ee2dfb73d06722916e21dde248b097f5",
+  "publicRepository": "vlada22/grounded-spatial-intelligence-public",
+  "scope": "Published browser demo and reviewed derived reconstruction observations only",
+  "intentionalDifferences": [
+    "Repository hyperlinks point to the public companion repository",
+    "Public-only validation, provenance, and deterministic result verification are added outside the published article text"
+  ]
+}
