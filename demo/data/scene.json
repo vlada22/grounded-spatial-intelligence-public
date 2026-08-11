@@ -1,0 +1,2928 @@
+{
+  "schemaVersion": 1,
+  "title": "Grounded Spatial Intelligence",
+  "sequence": {
+    "id": "translated-clean",
+    "frameCount": 9,
+    "fps": 3.0,
+    "imageSize": [
+      320,
+      180
+    ],
+    "translationBaselineWorld": 0.9
+  },
+  "coordinateConvention": {
+    "world": "+x right, +y down, +z forward",
+    "depth": "camera-frame z",
+    "pose": "world_from_camera",
+    "displayTransform": "Three.js group rotated 180 degrees around x"
+  },
+  "models": {
+    "geometry": "depth-anything/DA3-BASE",
+    "semantics": [
+      "facebook/sam3"
+    ],
+    "geometryImageSize": [
+      504,
+      280
+    ],
+    "semanticImageSize": [
+      320,
+      180
+    ],
+    "cameraConditioning": "Exact intrinsics and translated poses supplied"
+  },
+  "scenePointCloud": {
+    "path": "data/clouds/da3-scene.ply",
+    "pointCount": 16504,
+    "minimumConfidenceRank": 0.35
+  },
+  "cameras": [
+    {
+      "frameIndex": 0,
+      "timestampSeconds": 0.0,
+      "framePath": "data/frames/frame-000.webp",
+      "intrinsics": [
+        [
+          228.57142857142858,
+          0.0,
+          159.5
+        ],
+        [
+          0.0,
+          228.57142857142858,
+          89.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldFromCamera": [
+        [
+          0.9956342260592882,
+          -0.0,
+          0.09334070869305826,
+          -0.45
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.09334070869305827,
+          0.0,
+          0.9956342260592881,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position": [
+        -0.45,
+        0.0,
+        0.0
+      ],
+      "opticalAxis": [
+        0.09334070869305826,
+        0.0,
+        0.9956342260592881
+      ],
+      "horizontalFovDegrees": 69.98404039711733,
+      "verticalFovDegrees": 42.98408006668914
+    },
+    {
+      "frameIndex": 1,
+      "timestampSeconds": 0.3333333333333333,
+      "framePath": "data/frames/frame-001.webp",
+      "intrinsics": [
+        [
+          228.57142857142858,
+          0.0,
+          159.5
+        ],
+        [
+          0.0,
+          228.57142857142858,
+          89.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldFromCamera": [
+        [
+          0.9975372041844651,
+          -0.0,
+          0.0701393346692202,
+          -0.3375
+        ],
+        [
+          0.0,
+          1.0000000000000002,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0701393346692202,
+          0.0,
+          0.9975372041844651,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position": [
+        -0.3375,
+        0.0,
+        0.0
+      ],
+      "opticalAxis": [
+        0.0701393346692202,
+        0.0,
+        0.9975372041844651
+      ],
+      "horizontalFovDegrees": 69.98404039711733,
+      "verticalFovDegrees": 42.98408006668914
+    },
+    {
+      "frameIndex": 2,
+      "timestampSeconds": 0.6666666666666666,
+      "framePath": "data/frames/frame-002.webp",
+      "intrinsics": [
+        [
+          228.57142857142858,
+          0.0,
+          159.5
+        ],
+        [
+          0.0,
+          228.57142857142858,
+          89.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldFromCamera": [
+        [
+          0.998903174369838,
+          -0.0,
+          0.046823586298586156,
+          -0.225
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.04682358629858616,
+          0.0,
+          0.9989031743698379,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position": [
+        -0.225,
+        0.0,
+        0.0
+      ],
+      "opticalAxis": [
+        0.046823586298586156,
+        0.0,
+        0.9989031743698379
+      ],
+      "horizontalFovDegrees": 69.98404039711733,
+      "verticalFovDegrees": 42.98408006668914
+    },
+    {
+      "frameIndex": 3,
+      "timestampSeconds": 1.0,
+      "framePath": "data/frames/frame-003.webp",
+      "intrinsics": [
+        [
+          228.57142857142858,
+          0.0,
+          159.5
+        ],
+        [
+          0.0,
+          228.57142857142858,
+          89.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldFromCamera": [
+        [
+          0.9997254549007942,
+          -0.0,
+          0.023431065349237362,
+          -0.11249999999999999
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.023431065349237366,
+          0.0,
+          0.9997254549007941,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position": [
+        -0.11249999999999999,
+        0.0,
+        0.0
+      ],
+      "opticalAxis": [
+        0.023431065349237362,
+        0.0,
+        0.9997254549007941
+      ],
+      "horizontalFovDegrees": 69.98404039711733,
+      "verticalFovDegrees": 42.98408006668914
+    },
+    {
+      "frameIndex": 4,
+      "timestampSeconds": 1.3333333333333333,
+      "framePath": "data/frames/frame-004.webp",
+      "intrinsics": [
+        [
+          228.57142857142858,
+          0.0,
+          159.5
+        ],
+        [
+          0.0,
+          228.57142857142858,
+          89.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldFromCamera": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "opticalAxis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "horizontalFovDegrees": 69.98404039711733,
+      "verticalFovDegrees": 42.98408006668914
+    },
+    {
+      "frameIndex": 5,
+      "timestampSeconds": 1.6666666666666667,
+      "framePath": "data/frames/frame-005.webp",
+      "intrinsics": [
+        [
+          228.57142857142858,
+          0.0,
+          159.5
+        ],
+        [
+          0.0,
+          228.57142857142858,
+          89.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldFromCamera": [
+        [
+          0.9997254549007942,
+          0.0,
+          -0.023431065349237362,
+          0.11249999999999999
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.023431065349237366,
+          0.0,
+          0.9997254549007941,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position": [
+        0.11249999999999999,
+        0.0,
+        0.0
+      ],
+      "opticalAxis": [
+        -0.023431065349237362,
+        0.0,
+        0.9997254549007941
+      ],
+      "horizontalFovDegrees": 69.98404039711733,
+      "verticalFovDegrees": 42.98408006668914
+    },
+    {
+      "frameIndex": 6,
+      "timestampSeconds": 2.0,
+      "framePath": "data/frames/frame-006.webp",
+      "intrinsics": [
+        [
+          228.57142857142858,
+          0.0,
+          159.5
+        ],
+        [
+          0.0,
+          228.57142857142858,
+          89.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldFromCamera": [
+        [
+          0.998903174369838,
+          0.0,
+          -0.046823586298586156,
+          0.22500000000000003
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.04682358629858616,
+          0.0,
+          0.9989031743698379,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position": [
+        0.22500000000000003,
+        0.0,
+        0.0
+      ],
+      "opticalAxis": [
+        -0.046823586298586156,
+        0.0,
+        0.9989031743698379
+      ],
+      "horizontalFovDegrees": 69.98404039711733,
+      "verticalFovDegrees": 42.98408006668914
+    },
+    {
+      "frameIndex": 7,
+      "timestampSeconds": 2.3333333333333335,
+      "framePath": "data/frames/frame-007.webp",
+      "intrinsics": [
+        [
+          228.57142857142858,
+          0.0,
+          159.5
+        ],
+        [
+          0.0,
+          228.57142857142858,
+          89.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldFromCamera": [
+        [
+          0.9975372041844651,
+          0.0,
+          -0.07013933466922019,
+          0.33749999999999997
+        ],
+        [
+          -0.0,
+          1.0000000000000002,
+          0.0,
+          0.0
+        ],
+        [
+          0.07013933466922019,
+          0.0,
+          0.9975372041844651,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position": [
+        0.33749999999999997,
+        0.0,
+        0.0
+      ],
+      "opticalAxis": [
+        -0.07013933466922019,
+        0.0,
+        0.9975372041844651
+      ],
+      "horizontalFovDegrees": 69.98404039711733,
+      "verticalFovDegrees": 42.98408006668914
+    },
+    {
+      "frameIndex": 8,
+      "timestampSeconds": 2.6666666666666665,
+      "framePath": "data/frames/frame-008.webp",
+      "intrinsics": [
+        [
+          228.57142857142858,
+          0.0,
+          159.5
+        ],
+        [
+          0.0,
+          228.57142857142858,
+          89.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldFromCamera": [
+        [
+          0.9956342260592882,
+          0.0,
+          -0.09334070869305826,
+          0.45
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.09334070869305827,
+          0.0,
+          0.9956342260592881,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "position": [
+        0.45,
+        0.0,
+        0.0
+      ],
+      "opticalAxis": [
+        -0.09334070869305826,
+        0.0,
+        0.9956342260592881
+      ],
+      "horizontalFovDegrees": 69.98404039711733,
+      "verticalFovDegrees": 42.98408006668914
+    }
+  ],
+  "objects": [
+    {
+      "id": "red-box",
+      "label": "Red Box",
+      "colour": "#eb5353",
+      "groundTruth": {
+        "centroid": [
+          -0.55,
+          0.15,
+          4.0
+        ],
+        "dimensions": [
+          0.8,
+          0.8,
+          0.8
+        ],
+        "rotationWorldFromBox": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "masks": {
+        "exact": {
+          "0": "data/overlays/exact/red-box/frame-000.png",
+          "1": "data/overlays/exact/red-box/frame-001.png",
+          "2": "data/overlays/exact/red-box/frame-002.png",
+          "3": "data/overlays/exact/red-box/frame-003.png",
+          "4": "data/overlays/exact/red-box/frame-004.png",
+          "5": "data/overlays/exact/red-box/frame-005.png",
+          "6": "data/overlays/exact/red-box/frame-006.png",
+          "7": "data/overlays/exact/red-box/frame-007.png",
+          "8": "data/overlays/exact/red-box/frame-008.png"
+        },
+        "sam3": {
+          "0": "data/overlays/sam3/red-box/frame-000.png",
+          "1": "data/overlays/sam3/red-box/frame-001.png",
+          "2": "data/overlays/sam3/red-box/frame-002.png",
+          "3": "data/overlays/sam3/red-box/frame-003.png",
+          "4": "data/overlays/sam3/red-box/frame-004.png",
+          "5": "data/overlays/sam3/red-box/frame-005.png",
+          "6": "data/overlays/sam3/red-box/frame-006.png",
+          "7": "data/overlays/sam3/red-box/frame-007.png",
+          "8": "data/overlays/sam3/red-box/frame-008.png"
+        }
+      },
+      "predictions": {
+        "visible-surface-oracle": {
+          "centroid": [
+            -0.5384767575158794,
+            0.14967851572331056,
+            3.7594555499968565
+          ],
+          "dimensions": [
+            0.820924037792788,
+            0.7688255645879805,
+            0.398770873132727
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.9937566981223949,
+              0.01723295064362864,
+              0.11022998842868863
+            ],
+            [
+              0.01731718202846619,
+              -0.999850027687123,
+              0.00019323729480084855
+            ],
+            [
+              0.11021678703113935,
+              0.0017168419185798623,
+              -0.9939060882751244
+            ]
+          ],
+          "pointCount": 21726,
+          "evidencePointCount": 24112,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 1.0,
+          "meanSemanticScore": 1.0,
+          "centroidError": 0.24082051593832865,
+          "dimensionRelativeMae": 0.18888650003003352,
+          "predictedObjectKey": "red box#0",
+          "cloudPath": "data/clouds/visible-surface-oracle-red-box.ply"
+        },
+        "da3-exact-masks": {
+          "centroid": [
+            -0.4888671385967637,
+            0.14336866167059586,
+            3.4496320209852085
+          ],
+          "dimensions": [
+            0.7931470292638156,
+            0.7296134511038193,
+            0.08719908285206551
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.9749191504697484,
+              0.036216335458994726,
+              0.21959286667209005
+            ],
+            [
+              0.03806050292135113,
+              -0.9992667275608308,
+              -0.004171966831454918
+            ],
+            [
+              0.21928075192482951,
+              0.01242514530259083,
+              -0.9755826810678278
+            ]
+          ],
+          "pointCount": 53363,
+          "evidencePointCount": 58968,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 0.976830587721187,
+          "meanSemanticScore": 1.0,
+          "centroidError": 0.5537924825385518,
+          "dimensionRelativeMae": 0.32918351532512485,
+          "predictedObjectKey": "red box#0",
+          "cloudPath": "data/clouds/da3-exact-masks-red-box.ply"
+        },
+        "exact-depth-sam3": {
+          "centroid": [
+            -0.5371920412870046,
+            0.1502653736987624,
+            3.75953051384516
+          ],
+          "dimensions": [
+            0.8222300480007063,
+            0.7667519641919817,
+            0.3987963299155268
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.9938266225735775,
+              -0.010703732612787006,
+              -0.11042678285701542
+            ],
+            [
+              0.010739991164253388,
+              0.9999422891257185,
+              -0.0002664729064683063
+            ],
+            [
+              0.11042326228557205,
+              -0.0009211548035386232,
+              0.99388422596399
+            ]
+          ],
+          "pointCount": 21715,
+          "evidencePointCount": 24096,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 1.0,
+          "meanSemanticScore": 0.62109375,
+          "centroidError": 0.2408104815018785,
+          "dimensionRelativeMae": 0.19028406412216578,
+          "predictedObjectKey": "red box#0",
+          "cloudPath": "data/clouds/exact-depth-sam3-red-box.ply"
+        },
+        "da3-sam3-unfiltered": {
+          "centroid": [
+            -0.4883159875146855,
+            0.1430232348165839,
+            3.4497423599814594
+          ],
+          "dimensions": [
+            0.7930831363635463,
+            0.7286367066249801,
+            0.08717774917220732
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.9751390614207639,
+              0.029464646939125313,
+              0.219626149336058
+            ],
+            [
+              0.03110276179414295,
+              -0.9995081725243463,
+              -0.00400390631986361
+            ],
+            [
+              0.21940015747535033,
+              0.010735345257333198,
+              -0.9755758931328701
+            ]
+          ],
+          "pointCount": 53322,
+          "evidencePointCount": 58926,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 0.976857495810833,
+          "meanSemanticScore": 0.62109375,
+          "centroidError": 0.5537481946223272,
+          "dimensionRelativeMae": 0.32962600326636093,
+          "predictedObjectKey": "red box#0",
+          "cloudPath": "data/clouds/da3-sam3-unfiltered-red-box.ply"
+        },
+        "da3-sam3-filtered": {
+          "centroid": [
+            -0.4888663942861062,
+            0.14352182547089465,
+            3.4495747288552585
+          ],
+          "dimensions": [
+            0.7924179391360566,
+            0.7291463713079903,
+            0.08690832073986599
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.9750473994479625,
+              0.037031983817712,
+              0.21888627413405956
+            ],
+            [
+              0.03867845364364253,
+              -0.9992464550744857,
+              -0.0032402538189461737
+            ],
+            [
+              0.21860134046593255,
+              0.01162558366703875,
+              -0.9757449972973975
+            ]
+          ],
+          "pointCount": 53303,
+          "evidencePointCount": 58911,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 0.9768299554367306,
+          "meanSemanticScore": 0.62109375,
+          "centroidError": 0.5538476899000063,
+          "dimensionRelativeMae": 0.3298030703400363,
+          "predictedObjectKey": "red box#0",
+          "cloudPath": "data/clouds/da3-sam3-filtered-red-box.ply"
+        }
+      }
+    },
+    {
+      "id": "blue-box",
+      "label": "Blue Box",
+      "colour": "#4a88e8",
+      "groundTruth": {
+        "centroid": [
+          0.65,
+          0.0,
+          5.2
+        ],
+        "dimensions": [
+          1.0,
+          1.1,
+          0.7
+        ],
+        "rotationWorldFromBox": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "masks": {
+        "exact": {
+          "0": "data/overlays/exact/blue-box/frame-000.png",
+          "1": "data/overlays/exact/blue-box/frame-001.png",
+          "2": "data/overlays/exact/blue-box/frame-002.png",
+          "3": "data/overlays/exact/blue-box/frame-003.png",
+          "4": "data/overlays/exact/blue-box/frame-004.png",
+          "5": "data/overlays/exact/blue-box/frame-005.png",
+          "6": "data/overlays/exact/blue-box/frame-006.png",
+          "7": "data/overlays/exact/blue-box/frame-007.png",
+          "8": "data/overlays/exact/blue-box/frame-008.png"
+        },
+        "sam3": {
+          "2": "data/overlays/sam3/blue-box/frame-002.png",
+          "3": "data/overlays/sam3/blue-box/frame-003.png",
+          "4": "data/overlays/sam3/blue-box/frame-004.png",
+          "5": "data/overlays/sam3/blue-box/frame-005.png",
+          "6": "data/overlays/sam3/blue-box/frame-006.png",
+          "7": "data/overlays/sam3/blue-box/frame-007.png",
+          "8": "data/overlays/sam3/blue-box/frame-008.png"
+        }
+      },
+      "predictions": {
+        "visible-surface-oracle": {
+          "centroid": [
+            0.6391672484420621,
+            8.154865987669116e-18,
+            4.886726251423323
+          ],
+          "dimensions": [
+            1.053793544554658,
+            0.9858228309757018,
+            0.12165419422145927
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.0,
+              0.9986983347020797,
+              0.05100623749398428
+            ],
+            [
+              -1.0,
+              -1.1325659853064058e-17,
+              2.2175557716820997e-16
+            ],
+            [
+              2.220446049250313e-16,
+              -0.05100623749398428,
+              0.9986983347020797
+            ]
+          ],
+          "pointCount": 20351,
+          "evidencePointCount": 22514,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 1.0,
+          "meanSemanticScore": 1.0,
+          "centroidError": 0.31346098649369253,
+          "dimensionRelativeMae": 0.29413044386010556,
+          "predictedObjectKey": "blue box#1",
+          "cloudPath": "data/clouds/visible-surface-oracle-blue-box.ply"
+        },
+        "da3-exact-masks": {
+          "centroid": [
+            0.55399198953297,
+            -0.0010201586343853482,
+            4.31778201632054
+          ],
+          "dimensions": [
+            0.9362478918821948,
+            0.9301768469408926,
+            0.1421214792847306
+          ],
+          "rotationWorldFromBox": [
+            [
+              -0.007787608042792724,
+              -0.9843027192436669,
+              0.17631650532634546
+            ],
+            [
+              0.9985609222480737,
+              0.001701247377774184,
+              0.05360214843116418
+            ],
+            [
+              -0.05306069845044201,
+              0.17648020468846637,
+              0.9828729824514805
+            ]
+          ],
+          "pointCount": 49193,
+          "evidencePointCount": 54698,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 0.9325254827584972,
+          "meanSemanticScore": 1.0,
+          "centroidError": 0.8874272643574397,
+          "dimensionRelativeMae": 0.33855267373366776,
+          "predictedObjectKey": "blue box#1",
+          "cloudPath": "data/clouds/da3-exact-masks-blue-box.ply"
+        },
+        "exact-depth-sam3": {
+          "centroid": [
+            0.6499260659466533,
+            0.0008090332606370144,
+            4.850163710291426
+          ],
+          "dimensions": [
+            1.050618793381425,
+            0.9598792916244011,
+            0.02387517715968879
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.013089523714972634,
+              -0.9996111850643568,
+              -0.024619972850249146
+            ],
+            [
+              -0.9999141684434311,
+              -0.013099485325916623,
+              0.00024337271335275051
+            ],
+            [
+              -0.0005657870594833706,
+              0.024614674046753708,
+              -0.999696852904207
+            ]
+          ],
+          "pointCount": 15862,
+          "evidencePointCount": 17453,
+          "sourceFrames": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 1.0,
+          "meanSemanticScore": 0.80859375,
+          "centroidError": 0.3498372330071837,
+          "dimensionRelativeMae": 0.3503017728166909,
+          "predictedObjectKey": "blue box#0",
+          "cloudPath": "data/clouds/exact-depth-sam3-blue-box.ply"
+        },
+        "da3-sam3-unfiltered": {
+          "centroid": [
+            0.5788851033444848,
+            0.000401237746139883,
+            4.333115515042571
+          ],
+          "dimensions": [
+            0.9355203769517364,
+            0.90199016089007,
+            0.1085771584045788
+          ],
+          "rotationWorldFromBox": [
+            [
+              -0.014355424434722909,
+              -0.9852040982128167,
+              0.17078292260635883
+            ],
+            [
+              0.9990888045401083,
+              -0.007267344548102323,
+              0.04205646615963671
+            ],
+            [
+              -0.04019306447531027,
+              0.17123104440459908,
+              0.9844107105269598
+            ]
+          ],
+          "pointCount": 38209,
+          "evidencePointCount": 42455,
+          "sourceFrames": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 0.9353004974435087,
+          "meanSemanticScore": 0.80859375,
+          "centroidError": 0.8697966427722985,
+          "dimensionRelativeMae": 0.36414218095385015,
+          "predictedObjectKey": "blue box#0",
+          "cloudPath": "data/clouds/da3-sam3-unfiltered-blue-box.ply"
+        },
+        "da3-sam3-filtered": {
+          "centroid": [
+            0.5831299858026147,
+            0.00038391743562277494,
+            4.332552554584753
+          ],
+          "dimensions": [
+            0.9368120142235385,
+            0.8947725379514471,
+            0.0992774411239906
+          ],
+          "rotationWorldFromBox": [
+            [
+              -0.05342153797712518,
+              0.9861714975208473,
+              -0.1568818560498565
+            ],
+            [
+              0.9981767159258206,
+              0.048316885442872895,
+              -0.036176267975619104
+            ],
+            [
+              -0.028095961697405716,
+              -0.15852840773372331,
+              -0.9869545890656308
+            ]
+          ],
+          "pointCount": 37985,
+          "evidencePointCount": 42322,
+          "sourceFrames": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 0.9355268912277204,
+          "meanSemanticScore": 0.80859375,
+          "centroidError": 0.8700211587937354,
+          "dimensionRelativeMae": 0.37058508683312513,
+          "predictedObjectKey": "blue box#0",
+          "cloudPath": "data/clouds/da3-sam3-filtered-blue-box.ply"
+        }
+      }
+    },
+    {
+      "id": "green-box",
+      "label": "Green Box",
+      "colour": "#4abe84",
+      "groundTruth": {
+        "centroid": [
+          0.1,
+          -0.45,
+          6.2
+        ],
+        "dimensions": [
+          0.65,
+          0.65,
+          0.65
+        ],
+        "rotationWorldFromBox": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "masks": {
+        "exact": {
+          "0": "data/overlays/exact/green-box/frame-000.png",
+          "1": "data/overlays/exact/green-box/frame-001.png",
+          "2": "data/overlays/exact/green-box/frame-002.png",
+          "3": "data/overlays/exact/green-box/frame-003.png",
+          "4": "data/overlays/exact/green-box/frame-004.png",
+          "5": "data/overlays/exact/green-box/frame-005.png",
+          "6": "data/overlays/exact/green-box/frame-006.png",
+          "7": "data/overlays/exact/green-box/frame-007.png",
+          "8": "data/overlays/exact/green-box/frame-008.png"
+        },
+        "sam3": {
+          "0": "data/overlays/sam3/green-box/frame-000.png",
+          "1": "data/overlays/sam3/green-box/frame-001.png",
+          "2": "data/overlays/sam3/green-box/frame-002.png",
+          "3": "data/overlays/sam3/green-box/frame-003.png",
+          "4": "data/overlays/sam3/green-box/frame-004.png",
+          "5": "data/overlays/sam3/green-box/frame-005.png",
+          "6": "data/overlays/sam3/green-box/frame-006.png",
+          "7": "data/overlays/sam3/green-box/frame-007.png",
+          "8": "data/overlays/sam3/green-box/frame-008.png"
+        }
+      },
+      "predictions": {
+        "visible-surface-oracle": {
+          "centroid": [
+            0.006835558334323331,
+            -0.4873787411107651,
+            6.054450894643522
+          ],
+          "dimensions": [
+            0.7278753592560301,
+            0.5435335286247012,
+            0.4571566112614802
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.3029508014198771,
+              -0.9520196329198265,
+              0.04335239848327392
+            ],
+            [
+              -0.9441740387624518,
+              -0.2936535627605085,
+              0.1493417878728517
+            ],
+            [
+              -0.12944572780147623,
+              -0.08617542348754967,
+              -0.9878348039731579
+            ]
+          ],
+          "pointCount": 3167,
+          "evidencePointCount": 3518,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 1.0,
+          "meanSemanticScore": 1.0,
+          "centroidError": 0.17680872588188076,
+          "dimensionRelativeMae": 0.19342831762556345,
+          "predictedObjectKey": "green box#2",
+          "cloudPath": "data/clouds/visible-surface-oracle-green-box.ply"
+        },
+        "da3-exact-masks": {
+          "centroid": [
+            0.013960442463937857,
+            -0.4193282893343425,
+            5.185922511002337
+          ],
+          "dimensions": [
+            0.6320531898846715,
+            0.5348669066428895,
+            0.26424772031780697
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.23074282554498882,
+              -0.9496282192487332,
+              -0.21204714962949678
+            ],
+            [
+              -0.955127788735754,
+              -0.17946298351039397,
+              -0.2356351941758626
+            ],
+            [
+              0.18571121572016938,
+              0.25690325563532157,
+              -0.9484260970680368
+            ]
+          ],
+          "pointCount": 7720,
+          "evidencePointCount": 8791,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 0.6073064080890044,
+          "meanSemanticScore": 1.0,
+          "centroidError": 1.0181830449324742,
+          "dimensionRelativeMae": 0.26606778623314464,
+          "predictedObjectKey": "green box#2",
+          "cloudPath": "data/clouds/da3-exact-masks-green-box.ply"
+        },
+        "exact-depth-sam3": {
+          "centroid": [
+            0.007326351627427046,
+            -0.4876377297638473,
+            6.0544412997195804
+          ],
+          "dimensions": [
+            0.728197512025178,
+            0.5431195711796633,
+            0.4566312727117891
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.3041243304246985,
+              -0.9518737746722721,
+              0.03800932431508995
+            ],
+            [
+              -0.9435917465519965,
+              -0.295514460530954,
+              0.1493513289396909
+            ],
+            [
+              -0.1309313082600238,
+              -0.08128665762755938,
+              -0.9880533749798432
+            ]
+          ],
+          "pointCount": 3169,
+          "evidencePointCount": 3528,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 1.0,
+          "meanSemanticScore": 0.79296875,
+          "centroidError": 0.17661353014926334,
+          "dimensionRelativeMae": 0.19407521442755163,
+          "predictedObjectKey": "green box#0",
+          "cloudPath": "data/clouds/exact-depth-sam3-green-box.ply"
+        },
+        "da3-sam3-unfiltered": {
+          "centroid": [
+            0.013483707515413376,
+            -0.4200147523939779,
+            5.185981283409806
+          ],
+          "dimensions": [
+            0.6329939834290192,
+            0.5345085373779386,
+            0.2641905779967114
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.23600776895245165,
+              -0.9479051960531208,
+              -0.21395343486277757
+            ],
+            [
+              -0.9541091219943724,
+              -0.1842733647628623,
+              -0.23604895756198677
+            ],
+            [
+              0.1843261140511938,
+              0.25984431172236133,
+              -0.9478949400351909
+            ]
+          ],
+          "pointCount": 7745,
+          "evidencePointCount": 8817,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 0.6070315474258271,
+          "meanSemanticScore": 0.79296875,
+          "centroidError": 1.0181444600519605,
+          "dimensionRelativeMae": 0.26579841086991324,
+          "predictedObjectKey": "green box#0",
+          "cloudPath": "data/clouds/da3-sam3-unfiltered-green-box.ply"
+        },
+        "da3-sam3-filtered": {
+          "centroid": [
+            0.013799325390895581,
+            -0.4590179189472449,
+            5.1873281033081415
+          ],
+          "dimensions": [
+            0.6098392215155313,
+            0.4996809257203449,
+            0.2492842281502589
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.3430305908922775,
+              -0.9272780287372107,
+              -0.14995156262382775
+            ],
+            [
+              -0.9204098941958375,
+              -0.2999384109251018,
+              -0.25076398528921856
+            ],
+            [
+              0.18755170054814685,
+              0.224036619937361,
+              -0.9563639226510695
+            ]
+          ],
+          "pointCount": 5915,
+          "evidencePointCount": 6702,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 0.672595569009729,
+          "meanSemanticScore": 0.79296875,
+          "centroidError": 1.016374069678428,
+          "dimensionRelativeMae": 0.30317724339172564,
+          "predictedObjectKey": "green box#0",
+          "cloudPath": "data/clouds/da3-sam3-filtered-green-box.ply"
+        }
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "id": "visible-surface-oracle",
+      "label": "Visible-surface oracle",
+      "shortLabel": "Oracle",
+      "summary": {
+        "condition_id": "visible-surface-oracle",
+        "sequence_id": "translated-clean",
+        "object_count": 3,
+        "mean_centroid_error": 0.24369674277130063,
+        "mean_dimension_relative_mae": 0.2254817538385675,
+        "mean_pairwise_distance_error": 0.10886507965767452,
+        "nearest_neighbour_accuracy": 1.0,
+        "mean_retained_frame_fraction": 1.0
+      },
+      "policy": {
+        "min_geometry_confidence": 0.0,
+        "min_semantic_score": 0.0,
+        "stride": 1,
+        "reject_inconsistent_frames": false,
+        "frame_outlier_mad_multiplier": 6.0,
+        "reconstruction_model_id": "synthetic-visible-surface-oracle",
+        "reconstruction_scale_semantics": "metric_world_units",
+        "reconstruction_image_size": [
+          320,
+          180
+        ],
+        "semantic_source_image_sizes": {
+          "red-box": [
+            320,
+            180
+          ],
+          "blue-box": [
+            320,
+            180
+          ],
+          "green-box": [
+            320,
+            180
+          ]
+        },
+        "semantic_alignment": "identity",
+        "aligned_semantic_objects": []
+      },
+      "objects": {
+        "red-box": {
+          "centroid": [
+            -0.5384767575158794,
+            0.14967851572331056,
+            3.7594555499968565
+          ],
+          "dimensions": [
+            0.820924037792788,
+            0.7688255645879805,
+            0.398770873132727
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.9937566981223949,
+              0.01723295064362864,
+              0.11022998842868863
+            ],
+            [
+              0.01731718202846619,
+              -0.999850027687123,
+              0.00019323729480084855
+            ],
+            [
+              0.11021678703113935,
+              0.0017168419185798623,
+              -0.9939060882751244
+            ]
+          ],
+          "pointCount": 21726,
+          "evidencePointCount": 24112,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 1.0,
+          "meanSemanticScore": 1.0,
+          "centroidError": 0.24082051593832865,
+          "dimensionRelativeMae": 0.18888650003003352,
+          "predictedObjectKey": "red box#0",
+          "cloudPath": "data/clouds/visible-surface-oracle-red-box.ply"
+        },
+        "blue-box": {
+          "centroid": [
+            0.6391672484420621,
+            8.154865987669116e-18,
+            4.886726251423323
+          ],
+          "dimensions": [
+            1.053793544554658,
+            0.9858228309757018,
+            0.12165419422145927
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.0,
+              0.9986983347020797,
+              0.05100623749398428
+            ],
+            [
+              -1.0,
+              -1.1325659853064058e-17,
+              2.2175557716820997e-16
+            ],
+            [
+              2.220446049250313e-16,
+              -0.05100623749398428,
+              0.9986983347020797
+            ]
+          ],
+          "pointCount": 20351,
+          "evidencePointCount": 22514,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 1.0,
+          "meanSemanticScore": 1.0,
+          "centroidError": 0.31346098649369253,
+          "dimensionRelativeMae": 0.29413044386010556,
+          "predictedObjectKey": "blue box#1",
+          "cloudPath": "data/clouds/visible-surface-oracle-blue-box.ply"
+        },
+        "green-box": {
+          "centroid": [
+            0.006835558334323331,
+            -0.4873787411107651,
+            6.054450894643522
+          ],
+          "dimensions": [
+            0.7278753592560301,
+            0.5435335286247012,
+            0.4571566112614802
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.3029508014198771,
+              -0.9520196329198265,
+              0.04335239848327392
+            ],
+            [
+              -0.9441740387624518,
+              -0.2936535627605085,
+              0.1493417878728517
+            ],
+            [
+              -0.12944572780147623,
+              -0.08617542348754967,
+              -0.9878348039731579
+            ]
+          ],
+          "pointCount": 3167,
+          "evidencePointCount": 3518,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 1.0,
+          "meanSemanticScore": 1.0,
+          "centroidError": 0.17680872588188076,
+          "dimensionRelativeMae": 0.19342831762556345,
+          "predictedObjectKey": "green box#2",
+          "cloudPath": "data/clouds/visible-surface-oracle-green-box.ply"
+        }
+      },
+      "pairwiseDistances": [
+        {
+          "condition_id": "visible-surface-oracle",
+          "sequence_id": "translated-clean",
+          "first_object_id": "blue-box",
+          "second_object_id": "green-box",
+          "predicted_distance": 1.414553726793353,
+          "ground_truth_distance": 1.2267844146385296,
+          "absolute_error": 0.1877693121548234
+        },
+        {
+          "condition_id": "visible-surface-oracle",
+          "sequence_id": "translated-clean",
+          "first_object_id": "blue-box",
+          "second_object_id": "red-box",
+          "predicted_distance": 1.6370669800384834,
+          "ground_truth_distance": 1.7036725037400824,
+          "absolute_error": 0.066605523701599
+        },
+        {
+          "condition_id": "visible-surface-oracle",
+          "sequence_id": "translated-clean",
+          "first_object_id": "green-box",
+          "second_object_id": "red-box",
+          "predicted_distance": 2.4434015433924765,
+          "ground_truth_distance": 2.3711811402758753,
+          "absolute_error": 0.07222040311660116
+        }
+      ]
+    },
+    {
+      "id": "da3-exact-masks",
+      "label": "DA3 depth + exact masks",
+      "shortLabel": "DA3 + exact masks",
+      "summary": {
+        "condition_id": "da3-exact-masks",
+        "sequence_id": "translated-clean",
+        "object_count": 3,
+        "mean_centroid_error": 0.8198009306094886,
+        "mean_dimension_relative_mae": 0.31126799176397907,
+        "mean_pairwise_distance_error": 0.31306675817915736,
+        "nearest_neighbour_accuracy": 1.0,
+        "mean_retained_frame_fraction": 1.0
+      },
+      "policy": {
+        "min_geometry_confidence": 0.0,
+        "min_semantic_score": 0.0,
+        "stride": 1,
+        "reject_inconsistent_frames": false,
+        "frame_outlier_mad_multiplier": 6.0,
+        "reconstruction_model_id": "depth-anything/DA3-BASE",
+        "reconstruction_scale_semantics": "aligned_to_input_camera_translation",
+        "reconstruction_image_size": [
+          504,
+          280
+        ],
+        "semantic_source_image_sizes": {
+          "red-box": [
+            320,
+            180
+          ],
+          "blue-box": [
+            320,
+            180
+          ],
+          "green-box": [
+            320,
+            180
+          ]
+        },
+        "semantic_alignment": "nearest_neighbour_mask_resize_to_reconstruction",
+        "aligned_semantic_objects": [
+          "red-box",
+          "blue-box",
+          "green-box"
+        ]
+      },
+      "objects": {
+        "red-box": {
+          "centroid": [
+            -0.4888671385967637,
+            0.14336866167059586,
+            3.4496320209852085
+          ],
+          "dimensions": [
+            0.7931470292638156,
+            0.7296134511038193,
+            0.08719908285206551
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.9749191504697484,
+              0.036216335458994726,
+              0.21959286667209005
+            ],
+            [
+              0.03806050292135113,
+              -0.9992667275608308,
+              -0.004171966831454918
+            ],
+            [
+              0.21928075192482951,
+              0.01242514530259083,
+              -0.9755826810678278
+            ]
+          ],
+          "pointCount": 53363,
+          "evidencePointCount": 58968,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 0.976830587721187,
+          "meanSemanticScore": 1.0,
+          "centroidError": 0.5537924825385518,
+          "dimensionRelativeMae": 0.32918351532512485,
+          "predictedObjectKey": "red box#0",
+          "cloudPath": "data/clouds/da3-exact-masks-red-box.ply"
+        },
+        "blue-box": {
+          "centroid": [
+            0.55399198953297,
+            -0.0010201586343853482,
+            4.31778201632054
+          ],
+          "dimensions": [
+            0.9362478918821948,
+            0.9301768469408926,
+            0.1421214792847306
+          ],
+          "rotationWorldFromBox": [
+            [
+              -0.007787608042792724,
+              -0.9843027192436669,
+              0.17631650532634546
+            ],
+            [
+              0.9985609222480737,
+              0.001701247377774184,
+              0.05360214843116418
+            ],
+            [
+              -0.05306069845044201,
+              0.17648020468846637,
+              0.9828729824514805
+            ]
+          ],
+          "pointCount": 49193,
+          "evidencePointCount": 54698,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 0.9325254827584972,
+          "meanSemanticScore": 1.0,
+          "centroidError": 0.8874272643574397,
+          "dimensionRelativeMae": 0.33855267373366776,
+          "predictedObjectKey": "blue box#1",
+          "cloudPath": "data/clouds/da3-exact-masks-blue-box.ply"
+        },
+        "green-box": {
+          "centroid": [
+            0.013960442463937857,
+            -0.4193282893343425,
+            5.185922511002337
+          ],
+          "dimensions": [
+            0.6320531898846715,
+            0.5348669066428895,
+            0.26424772031780697
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.23074282554498882,
+              -0.9496282192487332,
+              -0.21204714962949678
+            ],
+            [
+              -0.955127788735754,
+              -0.17946298351039397,
+              -0.2356351941758626
+            ],
+            [
+              0.18571121572016938,
+              0.25690325563532157,
+              -0.9484260970680368
+            ]
+          ],
+          "pointCount": 7720,
+          "evidencePointCount": 8791,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 0.6073064080890044,
+          "meanSemanticScore": 1.0,
+          "centroidError": 1.0181830449324742,
+          "dimensionRelativeMae": 0.26606778623314464,
+          "predictedObjectKey": "green box#2",
+          "cloudPath": "data/clouds/da3-exact-masks-green-box.ply"
+        }
+      },
+      "pairwiseDistances": [
+        {
+          "condition_id": "da3-exact-masks",
+          "sequence_id": "translated-clean",
+          "first_object_id": "blue-box",
+          "second_object_id": "green-box",
+          "predicted_distance": 1.1046645113091216,
+          "ground_truth_distance": 1.2267844146385296,
+          "absolute_error": 0.12211990332940803
+        },
+        {
+          "condition_id": "da3-exact-masks",
+          "sequence_id": "translated-clean",
+          "first_object_id": "blue-box",
+          "second_object_id": "red-box",
+          "predicted_distance": 1.3645833455503216,
+          "ground_truth_distance": 1.7036725037400824,
+          "absolute_error": 0.3390891581897608
+        },
+        {
+          "condition_id": "da3-exact-masks",
+          "sequence_id": "translated-clean",
+          "first_object_id": "green-box",
+          "second_object_id": "red-box",
+          "predicted_distance": 1.893189927257572,
+          "ground_truth_distance": 2.3711811402758753,
+          "absolute_error": 0.4779912130183033
+        }
+      ]
+    },
+    {
+      "id": "exact-depth-sam3",
+      "label": "Exact depth + SAM 3",
+      "shortLabel": "Exact depth + SAM 3",
+      "summary": {
+        "condition_id": "exact-depth-sam3",
+        "sequence_id": "translated-clean",
+        "object_count": 3,
+        "mean_centroid_error": 0.25575374821944186,
+        "mean_dimension_relative_mae": 0.2448870171221361,
+        "mean_pairwise_distance_error": 0.12661997232560682,
+        "nearest_neighbour_accuracy": 1.0,
+        "mean_retained_frame_fraction": 1.0
+      },
+      "policy": {
+        "min_geometry_confidence": 0.0,
+        "min_semantic_score": 0.0,
+        "stride": 1,
+        "reject_inconsistent_frames": false,
+        "frame_outlier_mad_multiplier": 6.0,
+        "reconstruction_model_id": "synthetic-visible-surface-oracle",
+        "reconstruction_scale_semantics": "metric_world_units",
+        "reconstruction_image_size": [
+          320,
+          180
+        ],
+        "semantic_source_image_sizes": {
+          "red-box": [
+            320,
+            180
+          ],
+          "blue-box": [
+            320,
+            180
+          ],
+          "green-box": [
+            320,
+            180
+          ]
+        },
+        "semantic_alignment": "identity",
+        "aligned_semantic_objects": []
+      },
+      "objects": {
+        "red-box": {
+          "centroid": [
+            -0.5371920412870046,
+            0.1502653736987624,
+            3.75953051384516
+          ],
+          "dimensions": [
+            0.8222300480007063,
+            0.7667519641919817,
+            0.3987963299155268
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.9938266225735775,
+              -0.010703732612787006,
+              -0.11042678285701542
+            ],
+            [
+              0.010739991164253388,
+              0.9999422891257185,
+              -0.0002664729064683063
+            ],
+            [
+              0.11042326228557205,
+              -0.0009211548035386232,
+              0.99388422596399
+            ]
+          ],
+          "pointCount": 21715,
+          "evidencePointCount": 24096,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 1.0,
+          "meanSemanticScore": 0.62109375,
+          "centroidError": 0.2408104815018785,
+          "dimensionRelativeMae": 0.19028406412216578,
+          "predictedObjectKey": "red box#0",
+          "cloudPath": "data/clouds/exact-depth-sam3-red-box.ply"
+        },
+        "blue-box": {
+          "centroid": [
+            0.6499260659466533,
+            0.0008090332606370144,
+            4.850163710291426
+          ],
+          "dimensions": [
+            1.050618793381425,
+            0.9598792916244011,
+            0.02387517715968879
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.013089523714972634,
+              -0.9996111850643568,
+              -0.024619972850249146
+            ],
+            [
+              -0.9999141684434311,
+              -0.013099485325916623,
+              0.00024337271335275051
+            ],
+            [
+              -0.0005657870594833706,
+              0.024614674046753708,
+              -0.999696852904207
+            ]
+          ],
+          "pointCount": 15862,
+          "evidencePointCount": 17453,
+          "sourceFrames": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 1.0,
+          "meanSemanticScore": 0.80859375,
+          "centroidError": 0.3498372330071837,
+          "dimensionRelativeMae": 0.3503017728166909,
+          "predictedObjectKey": "blue box#0",
+          "cloudPath": "data/clouds/exact-depth-sam3-blue-box.ply"
+        },
+        "green-box": {
+          "centroid": [
+            0.007326351627427046,
+            -0.4876377297638473,
+            6.0544412997195804
+          ],
+          "dimensions": [
+            0.728197512025178,
+            0.5431195711796633,
+            0.4566312727117891
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.3041243304246985,
+              -0.9518737746722721,
+              0.03800932431508995
+            ],
+            [
+              -0.9435917465519965,
+              -0.295514460530954,
+              0.1493513289396909
+            ],
+            [
+              -0.1309313082600238,
+              -0.08128665762755938,
+              -0.9880533749798432
+            ]
+          ],
+          "pointCount": 3169,
+          "evidencePointCount": 3528,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 1.0,
+          "meanSemanticScore": 0.79296875,
+          "centroidError": 0.17661353014926334,
+          "dimensionRelativeMae": 0.19407521442755163,
+          "predictedObjectKey": "green box#0",
+          "cloudPath": "data/clouds/exact-depth-sam3-green-box.ply"
+        }
+      },
+      "pairwiseDistances": [
+        {
+          "condition_id": "exact-depth-sam3",
+          "sequence_id": "translated-clean",
+          "first_object_id": "blue-box",
+          "second_object_id": "green-box",
+          "predicted_distance": 1.4497583059086554,
+          "ground_truth_distance": 1.2267844146385296,
+          "absolute_error": 0.2229738912701258
+        },
+        {
+          "condition_id": "exact-depth-sam3",
+          "sequence_id": "translated-clean",
+          "first_object_id": "blue-box",
+          "second_object_id": "red-box",
+          "predicted_distance": 1.6189710829442812,
+          "ground_truth_distance": 1.7036725037400824,
+          "absolute_error": 0.08470142079580123
+        },
+        {
+          "condition_id": "exact-depth-sam3",
+          "sequence_id": "translated-clean",
+          "first_object_id": "green-box",
+          "second_object_id": "red-box",
+          "predicted_distance": 2.4433657451867687,
+          "ground_truth_distance": 2.3711811402758753,
+          "absolute_error": 0.0721846049108934
+        }
+      ]
+    },
+    {
+      "id": "da3-sam3-unfiltered",
+      "label": "DA3 + SAM 3, raw",
+      "shortLabel": "Full pipeline (raw)",
+      "summary": {
+        "condition_id": "da3-sam3-unfiltered",
+        "sequence_id": "translated-clean",
+        "object_count": 3,
+        "mean_centroid_error": 0.8138964324821955,
+        "mean_dimension_relative_mae": 0.31985553169670805,
+        "mean_pairwise_distance_error": 0.3032367277732151,
+        "nearest_neighbour_accuracy": 1.0,
+        "mean_retained_frame_fraction": 1.0
+      },
+      "policy": {
+        "min_geometry_confidence": 0.0,
+        "min_semantic_score": 0.0,
+        "stride": 1,
+        "reject_inconsistent_frames": false,
+        "frame_outlier_mad_multiplier": 6.0,
+        "reconstruction_model_id": "depth-anything/DA3-BASE",
+        "reconstruction_scale_semantics": "aligned_to_input_camera_translation",
+        "reconstruction_image_size": [
+          504,
+          280
+        ],
+        "semantic_source_image_sizes": {
+          "red-box": [
+            320,
+            180
+          ],
+          "blue-box": [
+            320,
+            180
+          ],
+          "green-box": [
+            320,
+            180
+          ]
+        },
+        "semantic_alignment": "nearest_neighbour_mask_resize_to_reconstruction",
+        "aligned_semantic_objects": [
+          "red-box",
+          "blue-box",
+          "green-box"
+        ]
+      },
+      "objects": {
+        "red-box": {
+          "centroid": [
+            -0.4883159875146855,
+            0.1430232348165839,
+            3.4497423599814594
+          ],
+          "dimensions": [
+            0.7930831363635463,
+            0.7286367066249801,
+            0.08717774917220732
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.9751390614207639,
+              0.029464646939125313,
+              0.219626149336058
+            ],
+            [
+              0.03110276179414295,
+              -0.9995081725243463,
+              -0.00400390631986361
+            ],
+            [
+              0.21940015747535033,
+              0.010735345257333198,
+              -0.9755758931328701
+            ]
+          ],
+          "pointCount": 53322,
+          "evidencePointCount": 58926,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 0.976857495810833,
+          "meanSemanticScore": 0.62109375,
+          "centroidError": 0.5537481946223272,
+          "dimensionRelativeMae": 0.32962600326636093,
+          "predictedObjectKey": "red box#0",
+          "cloudPath": "data/clouds/da3-sam3-unfiltered-red-box.ply"
+        },
+        "blue-box": {
+          "centroid": [
+            0.5788851033444848,
+            0.000401237746139883,
+            4.333115515042571
+          ],
+          "dimensions": [
+            0.9355203769517364,
+            0.90199016089007,
+            0.1085771584045788
+          ],
+          "rotationWorldFromBox": [
+            [
+              -0.014355424434722909,
+              -0.9852040982128167,
+              0.17078292260635883
+            ],
+            [
+              0.9990888045401083,
+              -0.007267344548102323,
+              0.04205646615963671
+            ],
+            [
+              -0.04019306447531027,
+              0.17123104440459908,
+              0.9844107105269598
+            ]
+          ],
+          "pointCount": 38209,
+          "evidencePointCount": 42455,
+          "sourceFrames": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 0.9353004974435087,
+          "meanSemanticScore": 0.80859375,
+          "centroidError": 0.8697966427722985,
+          "dimensionRelativeMae": 0.36414218095385015,
+          "predictedObjectKey": "blue box#0",
+          "cloudPath": "data/clouds/da3-sam3-unfiltered-blue-box.ply"
+        },
+        "green-box": {
+          "centroid": [
+            0.013483707515413376,
+            -0.4200147523939779,
+            5.185981283409806
+          ],
+          "dimensions": [
+            0.6329939834290192,
+            0.5345085373779386,
+            0.2641905779967114
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.23600776895245165,
+              -0.9479051960531208,
+              -0.21395343486277757
+            ],
+            [
+              -0.9541091219943724,
+              -0.1842733647628623,
+              -0.23604895756198677
+            ],
+            [
+              0.1843261140511938,
+              0.25984431172236133,
+              -0.9478949400351909
+            ]
+          ],
+          "pointCount": 7745,
+          "evidencePointCount": 8817,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 0.6070315474258271,
+          "meanSemanticScore": 0.79296875,
+          "centroidError": 1.0181444600519605,
+          "dimensionRelativeMae": 0.26579841086991324,
+          "predictedObjectKey": "green box#0",
+          "cloudPath": "data/clouds/da3-sam3-unfiltered-green-box.ply"
+        }
+      },
+      "pairwiseDistances": [
+        {
+          "condition_id": "da3-sam3-unfiltered",
+          "sequence_id": "translated-clean",
+          "first_object_id": "blue-box",
+          "second_object_id": "green-box",
+          "predicted_distance": 1.1062587229141256,
+          "ground_truth_distance": 1.2267844146385296,
+          "absolute_error": 0.12052569172440397
+        },
+        {
+          "condition_id": "da3-sam3-unfiltered",
+          "sequence_id": "translated-clean",
+          "first_object_id": "blue-box",
+          "second_object_id": "red-box",
+          "predicted_distance": 1.3926978615126782,
+          "ground_truth_distance": 1.7036725037400824,
+          "absolute_error": 0.31097464222740423
+        },
+        {
+          "condition_id": "da3-sam3-unfiltered",
+          "sequence_id": "translated-clean",
+          "first_object_id": "green-box",
+          "second_object_id": "red-box",
+          "predicted_distance": 1.8929712909080383,
+          "ground_truth_distance": 2.3711811402758753,
+          "absolute_error": 0.47820984936783706
+        }
+      ]
+    },
+    {
+      "id": "da3-sam3-filtered",
+      "label": "DA3 + SAM 3, filtered",
+      "shortLabel": "Full pipeline (filtered)",
+      "summary": {
+        "condition_id": "da3-sam3-filtered",
+        "sequence_id": "translated-clean",
+        "object_count": 3,
+        "mean_centroid_error": 0.8134143061240566,
+        "mean_dimension_relative_mae": 0.3345218001882957,
+        "mean_pairwise_distance_error": 0.2912222199918004,
+        "nearest_neighbour_accuracy": 1.0,
+        "mean_retained_frame_fraction": 1.0
+      },
+      "policy": {
+        "min_geometry_confidence": 0.5,
+        "min_semantic_score": 0.5,
+        "stride": 1,
+        "reject_inconsistent_frames": true,
+        "frame_outlier_mad_multiplier": 6.0,
+        "reconstruction_model_id": "depth-anything/DA3-BASE",
+        "reconstruction_scale_semantics": "aligned_to_input_camera_translation",
+        "reconstruction_image_size": [
+          504,
+          280
+        ],
+        "semantic_source_image_sizes": {
+          "red-box": [
+            320,
+            180
+          ],
+          "blue-box": [
+            320,
+            180
+          ],
+          "green-box": [
+            320,
+            180
+          ]
+        },
+        "semantic_alignment": "nearest_neighbour_mask_resize_to_reconstruction",
+        "aligned_semantic_objects": [
+          "red-box",
+          "blue-box",
+          "green-box"
+        ]
+      },
+      "objects": {
+        "red-box": {
+          "centroid": [
+            -0.4888663942861062,
+            0.14352182547089465,
+            3.4495747288552585
+          ],
+          "dimensions": [
+            0.7924179391360566,
+            0.7291463713079903,
+            0.08690832073986599
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.9750473994479625,
+              0.037031983817712,
+              0.21888627413405956
+            ],
+            [
+              0.03867845364364253,
+              -0.9992464550744857,
+              -0.0032402538189461737
+            ],
+            [
+              0.21860134046593255,
+              0.01162558366703875,
+              -0.9757449972973975
+            ]
+          ],
+          "pointCount": 53303,
+          "evidencePointCount": 58911,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 0.9768299554367306,
+          "meanSemanticScore": 0.62109375,
+          "centroidError": 0.5538476899000063,
+          "dimensionRelativeMae": 0.3298030703400363,
+          "predictedObjectKey": "red box#0",
+          "cloudPath": "data/clouds/da3-sam3-filtered-red-box.ply"
+        },
+        "blue-box": {
+          "centroid": [
+            0.5831299858026147,
+            0.00038391743562277494,
+            4.332552554584753
+          ],
+          "dimensions": [
+            0.9368120142235385,
+            0.8947725379514471,
+            0.0992774411239906
+          ],
+          "rotationWorldFromBox": [
+            [
+              -0.05342153797712518,
+              0.9861714975208473,
+              -0.1568818560498565
+            ],
+            [
+              0.9981767159258206,
+              0.048316885442872895,
+              -0.036176267975619104
+            ],
+            [
+              -0.028095961697405716,
+              -0.15852840773372331,
+              -0.9869545890656308
+            ]
+          ],
+          "pointCount": 37985,
+          "evidencePointCount": 42322,
+          "sourceFrames": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 0.9355268912277204,
+          "meanSemanticScore": 0.80859375,
+          "centroidError": 0.8700211587937354,
+          "dimensionRelativeMae": 0.37058508683312513,
+          "predictedObjectKey": "blue box#0",
+          "cloudPath": "data/clouds/da3-sam3-filtered-blue-box.ply"
+        },
+        "green-box": {
+          "centroid": [
+            0.013799325390895581,
+            -0.4590179189472449,
+            5.1873281033081415
+          ],
+          "dimensions": [
+            0.6098392215155313,
+            0.4996809257203449,
+            0.2492842281502589
+          ],
+          "rotationWorldFromBox": [
+            [
+              0.3430305908922775,
+              -0.9272780287372107,
+              -0.14995156262382775
+            ],
+            [
+              -0.9204098941958375,
+              -0.2999384109251018,
+              -0.25076398528921856
+            ],
+            [
+              0.18755170054814685,
+              0.224036619937361,
+              -0.9563639226510695
+            ]
+          ],
+          "pointCount": 5915,
+          "evidencePointCount": 6702,
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "retainedFrames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejectedFrames": [],
+          "meanGeometryConfidence": 0.672595569009729,
+          "meanSemanticScore": 0.79296875,
+          "centroidError": 1.016374069678428,
+          "dimensionRelativeMae": 0.30317724339172564,
+          "predictedObjectKey": "green box#0",
+          "cloudPath": "data/clouds/da3-sam3-filtered-green-box.ply"
+        }
+      },
+      "pairwiseDistances": [
+        {
+          "condition_id": "da3-sam3-filtered",
+          "sequence_id": "translated-clean",
+          "first_object_id": "blue-box",
+          "second_object_id": "green-box",
+          "predicted_distance": 1.1250905238478215,
+          "ground_truth_distance": 1.2267844146385296,
+          "absolute_error": 0.10169389079070812
+        },
+        {
+          "condition_id": "da3-sam3-filtered",
+          "sequence_id": "translated-clean",
+          "first_object_id": "blue-box",
+          "second_object_id": "red-box",
+          "predicted_distance": 1.3961785488862164,
+          "ground_truth_distance": 1.7036725037400824,
+          "absolute_error": 0.307493954853866
+        },
+        {
+          "condition_id": "da3-sam3-filtered",
+          "sequence_id": "translated-clean",
+          "first_object_id": "green-box",
+          "second_object_id": "red-box",
+          "predicted_distance": 1.9067023259450482,
+          "ground_truth_distance": 2.3711811402758753,
+          "absolute_error": 0.46447881433082716
+        }
+      ]
+    }
+  ],
+  "publicationPlot": "assets/translated-clean-ablation.png"
+}

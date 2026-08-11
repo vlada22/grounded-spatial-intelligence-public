@@ -1,2 +1,227 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Grounded Spatial Intelligence — Reconstruction Explorer</title><style>body{font-family:system-ui,sans-serif;max-width:1040px;margin:0 auto;padding:40px 22px;background:#0b1114;color:#e7efed}a{color:#8ad7ce}.hero{padding:28px 0;border-bottom:1px solid #294247}h1{font-size:clamp(2.5rem,6vw,5rem);line-height:.95;margin:.2em 0}.muted{color:#9dafac}.controls{margin:28px 0}.controls select{font:inherit;padding:10px;background:#142126;color:#e7efed;border:1px solid #36535a;border-radius:8px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}.card{padding:18px;border:1px solid #2d4850;border-radius:14px;background:#111a1e}.big{font-size:2rem;font-weight:750}.camera{margin-top:28px;padding-top:24px;border-top:1px solid #294247}.bar{height:10px;background:#24373d;border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;background:#d9b56f}</style></head><body><header class="hero"><p>Article 02 · Sanitized publication evidence</p><h1>A depth map is<br>not a world model.</h1><p class="muted">An aggregate-evidence explorer for the published spatial reconstruction study. No checkpoints, tokens, notebooks, raw GPU bundles, dense model outputs, or handoff archives are included.</p><p><a href="https://github.com/vlada22/grounded-spatial-intelligence-public">Public repository ↗</a></p></header><main><section class="controls"><label>Evaluation condition <select id="condition"></select></label></section><section class="grid"><div class="card"><span class="muted">Mean centroid error</span><div class="big" id="centroid">—</div></div><div class="card"><span class="muted">Mean pairwise-distance error</span><div class="big" id="pairwise">—</div></div><div class="card"><span class="muted">Nearest ordering</span><div class="big" id="nearest">—</div></div><div class="card"><span class="muted">Condition</span><div id="label">—</div></div></section><section class="camera"><h2>Image-only camera estimation</h2><div class="grid"><div class="card"><span class="muted">Trajectory RMSE after alignment</span><div class="big" id="traj">—</div></div><div class="card"><span class="muted">Mean orientation error</span><div class="big" id="orient">—</div></div><div class="card"><span class="muted">Focal-length relative MAE</span><div class="big" id="focal">—</div></div><div class="card"><span class="muted">Pairwise error, image-only</span><div class="big" id="cameraPair">—</div></div></div><p class="muted">A coherent aligned camera path did not imply calibrated intrinsics or metric geometry. The published result keeps those claims separate.</p></section><section class="camera"><h2>What survives the stripping boundary</h2><p>Reviewed aggregate measurements, scale/camera semantics, controlled-condition labels, and the disclosed qualitative-transfer summary remain public. Raw model and notebook artifacts remain in the research repository that can now be made private.</p></section></main><script>fetch('./data/results.json').then(r=>r.json()).then(d=>{const q=s=>document.querySelector(s),sel=q('#condition');for(const c of d.conditions){const o=document.createElement('option');o.value=c.id;o.textContent=c.label;sel.append(o)}function render(){const c=d.conditions.find(x=>x.id===sel.value)||d.conditions[0];q('#label').textContent=c.label;q('#centroid').textContent=c.meanCentroidError==null?'not separately reported':c.meanCentroidError.toFixed(4);q('#pairwise').textContent=c.meanPairwiseDistanceError.toFixed(4);q('#nearest').textContent=c.nearestOrderingCorrect?'correct':'not reported'}sel.addEventListener('change',render);render();q('#traj').textContent=d.imageOnlyCamera.trajectoryRmseWorld.toFixed(4);q('#orient').textContent=d.imageOnlyCamera.meanOrientationErrorDegrees.toFixed(3)+'°';q('#focal').textContent=d.imageOnlyCamera.focalLengthNormalizedRelativeMaePercent.toFixed(2)+'%';q('#cameraPair').textContent=d.imageOnlyCamera.pairwiseErrorImageOnly.toFixed(4)}).catch(()=>document.body.insertAdjacentHTML('beforeend','<p>Evidence payload could not be loaded.</p>'));</script></body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="An interactive 3D reconstruction explorer for the Grounded Spatial Intelligence experiment."
+    />
+    <title>Grounded Spatial Intelligence — Reconstruction Explorer</title>
+    <link rel="stylesheet" href="./styles.css?v=20260802-webgl-fallback" />
+    <style>
+      /* A live WebGL canvas means the explorer is already usable. Do not let a
+         stale loading message cover it; genuine warnings and errors stay visible. */
+      #viewport:has(> canvas)
+        > .viewport-status:not(.error):not(.warning):not(.fallback) {
+        display: none;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./vendor/three/three.module.js",
+          "three/addons/": "./vendor/three/addons/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Grounded Spatial Intelligence home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>
+          <strong>Grounded Spatial Intelligence</strong>
+          <small>Article 02 · Reconstruction explorer</small>
+        </span>
+      </a>
+      <nav>
+        <a href="#experiment">Experiment</a>
+        <a href="#results">Results</a>
+        <a
+          class="repo-link"
+          href="https://github.com/vlada22/grounded-spatial-intelligence-public"
+          target="_blank"
+          rel="noreferrer"
+          >GitHub <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="experiment">
+        <div class="eyebrow"><span></span> Measurable 3D reconstruction from monocular video</div>
+        <h1>A depth map is <em>not</em><br />a world model.</h1>
+        <p class="hero-copy">
+          Explore how exact surfaces, learned depth, semantic tracks, and deterministic
+          filtering change the same spatial measurements. Each reconstructed object remains
+          traceable to its source frames and pixels.
+        </p>
+        <div class="fact-row" aria-label="Experiment facts">
+          <span><b>9</b> calibrated views</span>
+          <span><b>0.9</b> unit camera baseline</span>
+          <span><b>5</b> evaluation conditions</span>
+          <span><b>3</b> measured objects</span>
+        </div>
+      </section>
+
+      <section class="explorer-shell" aria-label="Interactive 3D reconstruction explorer">
+        <div class="explorer-head">
+          <div>
+            <span class="section-kicker">Interactive reconstruction</span>
+            <h2>One scene, five levels of trust</h2>
+          </div>
+          <div class="condition-control">
+            <label for="condition-select">Evaluation condition</label>
+            <select id="condition-select" aria-label="Evaluation condition"></select>
+          </div>
+        </div>
+
+        <div class="explorer-grid">
+          <article class="viewport-card">
+            <div class="viewport-toolbar" aria-label="3D layer controls">
+              <label><input id="toggle-scene" type="checkbox" checked /> Scene cloud</label>
+              <label><input id="toggle-evidence" type="checkbox" checked /> Object point clouds</label>
+              <label><input id="toggle-cameras" type="checkbox" checked /> Cameras</label>
+              <label><input id="toggle-ground-truth" type="checkbox" checked /> Ground truth</label>
+              <button id="reset-view" type="button">Reset view</button>
+            </div>
+            <div id="viewport" role="img" aria-label="Interactive reconstructed 3D scene">
+              <div id="viewport-status" class="viewport-status">
+                <span class="spinner" aria-hidden="true"></span> Loading reconstruction…
+              </div>
+              <div class="viewport-hint">Drag to orbit · Scroll to zoom · Click an object</div>
+              <div class="viewport-legend" aria-label="Object colour legend"></div>
+            </div>
+            <div class="metric-strip" aria-live="polite">
+              <div><span>Centroid error</span><strong id="metric-centroid">—</strong></div>
+              <div><span>Dimension MAE</span><strong id="metric-dimension">—</strong></div>
+              <div><span>Pairwise error</span><strong id="metric-pairwise">—</strong></div>
+              <div><span>Nearest ordering</span><strong id="metric-nearest">—</strong></div>
+            </div>
+          </article>
+
+          <aside class="evidence-panel">
+            <article class="panel-card frame-card">
+              <div class="card-heading">
+                <div>
+                  <span class="section-kicker">Frame inspection</span>
+                  <h3 id="frame-title">Source frame 0</h3>
+                </div>
+                <div class="segmented-control" aria-label="Mask source">
+                  <button type="button" data-mask-mode="sam3" class="active">SAM 3</button>
+                  <button type="button" data-mask-mode="exact">Exact</button>
+                  <button type="button" data-mask-mode="off">Off</button>
+                </div>
+              </div>
+              <div class="frame-stage">
+                <img id="source-frame" alt="Synthetic source frame" />
+                <img id="mask-overlay" alt="Selected object mask overlay" />
+                <span id="frame-index-badge">F00</span>
+              </div>
+              <input id="frame-slider" type="range" min="0" max="8" value="0" step="1" />
+              <div class="frame-meta">
+                <span id="frame-time">0.00 s</span>
+                <span id="mask-status">SAM 3 mask available</span>
+              </div>
+            </article>
+
+            <article class="panel-card object-card">
+              <div class="card-heading object-heading">
+                <div>
+                  <span class="section-kicker">Object measurement</span>
+                  <h3 id="object-title">Red Box</h3>
+                </div>
+                <span id="object-swatch" class="object-swatch" aria-hidden="true"></span>
+              </div>
+              <div id="object-tabs" class="object-tabs" aria-label="Measured objects"></div>
+              <dl class="measurement-list">
+                <div><dt>Estimated dimensions</dt><dd id="object-dimensions">—</dd></div>
+                <div><dt>Centroid error</dt><dd id="object-centroid-error">—</dd></div>
+                <div><dt>Point count</dt><dd id="object-points">—</dd></div>
+                <div><dt>Geometry confidence</dt><dd id="object-geometry-confidence">—</dd></div>
+                <div><dt>Semantic score</dt><dd id="object-semantic-score">—</dd></div>
+                <div><dt>Retained views</dt><dd id="object-views">—</dd></div>
+              </dl>
+              <p class="score-note">Model scores are preserved raw; they are not calibrated probabilities.</p>
+              <div>
+                <span class="mini-label">Supporting frames</span>
+                <div id="support-frames" class="support-frames" aria-label="Supporting frames"></div>
+              </div>
+            </article>
+
+            <article class="panel-card answer-card">
+              <span class="section-kicker">Deterministic spatial tool</span>
+              <h3 id="spatial-question">Which object is closest?</h3>
+              <p id="spatial-answer">Select an object to query the measured scene.</p>
+              <div id="distance-comparison" class="distance-comparison"></div>
+            </article>
+          </aside>
+        </div>
+      </section>
+
+      <section class="results-section" id="results">
+        <div class="results-copy">
+          <span class="section-kicker">What the experiment found</span>
+          <h2>Depth dominates the error.<br />Segmentation stays near the oracle.</h2>
+          <p>
+            With exact depth, SAM 3 remains close to the visible-surface ceiling. Replacing
+            exact depth with pose-conditioned DA3 raises centroid error by about 3.36× and
+            pairwise-distance error by about 2.88×. The raw end-to-end pipeline therefore
+            tracks DA3's geometry error much more closely than SAM 3's mask error.
+          </p>
+          <div class="finding-grid">
+            <div><b>3.36×</b><span>centroid error from learned depth</span></div>
+            <div><b>2.88×</b><span>pairwise error from learned depth</span></div>
+            <div><b>4.0%</b><span>pairwise gain after filtering</span></div>
+            <div><b>+4.6%</b><span>dimension error after filtering</span></div>
+          </div>
+          <p class="caveat">
+            This is one controlled, pose-conditioned sequence. Exact camera translation
+            supplies metric scale; a fixed or ideal PTZ camera cannot recover that scale
+            from rotational image motion alone.
+          </p>
+        </div>
+        <figure class="result-figure">
+          <img
+            src="./assets/translated-clean-ablation.png"
+            alt="Bar charts comparing centroid, dimension and pairwise distance error across five evaluation conditions"
+          />
+          <figcaption>Lower is better. Nearest-neighbour ordering was correct in all five conditions.</figcaption>
+        </figure>
+      </section>
+
+      <section class="method-section">
+        <span class="section-kicker">Reconstruction pipeline</span>
+        <h2>Learned models observe.<br />Deterministic tools measure.</h2>
+        <div class="method-flow" aria-label="Reconstruction processing stages">
+          <div><span>01</span><b>Source frames</b><p>Nine exact calibrated views</p></div>
+          <i aria-hidden="true">→</i>
+          <div><span>02</span><b>DA3 + SAM 3</b><p>Depth, cameras, masks, scores</p></div>
+          <i aria-hidden="true">→</i>
+          <div><span>03</span><b>Semantic point clouds</b><p>Frame and pixel provenance retained</p></div>
+          <i aria-hidden="true">→</i>
+          <div><span>04</span><b>Spatial tools</b><p>Centroids, dimensions, distances</p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Grounded Spatial Intelligence · A reproducible computer-vision research artifact</p>
+      <a href="https://github.com/vlada22/grounded-spatial-intelligence-public">Inspect the source and reports ↗</a>
+    </footer>
+
+    <script>
+      window.__gsiBootWatchdog = window.setTimeout(() => {
+        const status = document.querySelector("#viewport-status");
+        if (!status || status.hidden) return;
+        status.classList.add("error");
+        status.textContent =
+          "The reconstruction viewer did not start. Reload the page or check the browser console.";
+      }, 10000);
+    </script>
+    <script type="module" src="./app.js?v=20260802-resource-loader"></script>
+  </body>
+</html>
